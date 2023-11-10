@@ -115,13 +115,10 @@ img {
 .menu-studio {
   color: #404bbf;
 }
-.container-menu-items:hover {
+.container-menu-items:hover,
+:focus {
   color: #404bbf;
 }
-.container-menu-items:focus {
-  color: #404bbf;
-}
-
 .container-address {
   font-style: normal;
 }
@@ -142,12 +139,11 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.container-contakts-items:hover {
+.container-contakts-items:hover,
+:focus {
   color: #404bbf;
 }
-.container-contakts-items:focus {
-  color: #404bbf;
-}
+
 /*conteiner-title*/
 .section-title {
   background-color: #2e2f42;
