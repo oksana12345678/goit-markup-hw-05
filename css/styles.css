@@ -1,5 +1,5 @@
 body {
-  background: #fff;
+  background-color: #fff;
   color: #434455;
   font-family: "Roboto", sans-serif;
 }
@@ -143,7 +143,6 @@ img {
 :focus {
   color: #404bbf;
 }
-
 /*conteiner-title*/
 .section-title {
   background-color: #2e2f42;
@@ -176,7 +175,6 @@ img {
 }
 .container-title-button {
   background: #4d5ae5;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #fff;
   cursor: pointer;
@@ -190,7 +188,6 @@ img {
   margin-top: 48px;
   min-width: 169px;
   height: 56px;
-  /* Button Text */
   font-size: 16px;
   line-height: 1.5em;
   letter-spacing: 0.04em;
@@ -198,10 +195,8 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.container-title-button:hover {
-  background-color: #404bbf;
-}
-.container-title-button:focus {
+.container-title-button:hover,
+:focus {
   background-color: #404bbf;
 }
 .main-content-text {
@@ -244,7 +239,6 @@ img {
 }
 .container-text-title {
   color: #2e2f42;
-  font-family: Roboto;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -328,10 +322,8 @@ img {
 .icon-social {
   fill: #f4f4fd;
 }
-.link-social-footer:hover {
-  background-color: #31d0aa;
-}
-.link-social-footer:focus {
+.link-social-footer:hover,
+:focus {
   background-color: #31d0aa;
 }
 .container {
@@ -352,7 +344,6 @@ img {
 .container-title-two {
   color: #2e2f42;
   text-align: center;
-  font-family: Roboto;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -395,7 +386,6 @@ img {
 }
 .logo-two {
   color: #4d5ae5;
-  font-family: Raleway, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -408,7 +398,6 @@ img {
 }
 .logo-stud-two {
   color: #f4f4fd;
-  font-family: Raleway, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -422,7 +411,6 @@ img {
 }
 .footer-desc {
   color: #f4f4fd;
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -450,7 +438,6 @@ img {
 }
 .lable-footer {
   color: #fff;
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -463,7 +450,6 @@ img {
   width: 264px;
   height: 40px;
   color: #fff;
-  font-family: Roboto;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -481,7 +467,6 @@ img {
   background-color: #4d5ae5;
   color: #fff;
   text-align: center;
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
