@@ -481,25 +481,40 @@
       </div>
     </footer>
     <form action="" class="backdrop-form">
-      <h3>Leave your contacts and we will call you back</h3>
-      <label for="">Name<input type="text" class="backdrop-item" /></label>
-      <label for="">Phone<input type="tel" class="backdrop-item" /></label>
-      <label for="">Email<input type="email" class="backdrop-item" /></label>
-      <label for="">
-        Comment
-        <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-          class="text-area"
-        ></textarea>
-      </label>
-      <input type="checkbox" name="policy" id="policy" class="check-box" />
-      <label for="policy"
-        >I accept the terms and conditions of the
-        <a href="" class="polisy-link">Privacy Policy</a></label
-      >
+      <h3 class="form-title">Leave your contacts and we will call you back</h3>
+      <div class="container-form">
+        <label
+          for="name"
+          class="backdrop-lebel"
+          <label
+          for="name"
+          class="backdrop-lebel"
+          >Name<input type="text" class="backdrop-item" name="name"
+        /></label>
+        <label for="phone" class="backdrop-lebel"
+          >Phone<input type="tel" class="backdrop-item" name="phone"
+        /></label>
+        <label for="email" class="backdrop-lebel"
+          >Email<input type="email" class="backdrop-item" name="email"
+        /></label>
+        <label for="comment" class="backdrop-lebel">
+          Comment
+          <textarea
+            name="comment"
+            id="comment"
+            cols="30"
+            rows="10"
+            class="text-area"
+          ></textarea>
+        </label>
+      </div>
+      <div class="polisy-box">
+        <input type="checkbox" name="policy" id="policy" class="check-box" />
+        <label for="policy" class="policy-accept"
+          >I accept the terms and conditions of the
+          <a href="" class="polisy-link">Privacy Policy</a></label
+        >
+      </div>
     </form>
   </body>
 </html>
