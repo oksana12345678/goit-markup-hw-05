@@ -521,7 +521,20 @@ img {
   flex-direction: column;
 }
 .backdrop-item {
-  height: 58px;
+  height: 40px;
+  margin-top: 4px;
+}
+.text-area {
+  margin-top: 4px;
+  height: 120px;
+}
+.text-area::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.48px;
 }
 .polisy-box {
   margin-top: 16px;
