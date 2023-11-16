@@ -374,11 +374,10 @@ img {
   padding: 100px 0;
   display: flex;
 }
-.footer-title {
+.footer-desc-soc {
   display: flex;
   color: #fff;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: 1.5em;
   letter-spacing: 0.02em;
@@ -437,14 +436,6 @@ img {
   gap: 16px;
   margin-left: 80px;
 }
-.lable-footer {
-  color: #fff;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-}
 .email-footer {
   border-radius: 4px;
   border: 1px solid #fff;
@@ -452,12 +443,12 @@ img {
   height: 40px;
   color: #fff;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.48px;
+  line-height: 1.5em;
+  letter-spacing: 0.04em;
   background-color: transparent;
   padding-left: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .email-footer::placeholder {
   color: #fff;
@@ -467,17 +458,15 @@ img {
   border: 1px solid #4d5ae5;
 }
 .subscribe-bttn {
+  font-family: "Roboto", sans-serif;
   border-radius: 4px;
   background-color: #4d5ae5;
   color: #fff;
   text-align: center;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 1.5em;
   letter-spacing: 0.04em;
-  gap: 16px;
-  padding: 8px 24px;
   display: flex;
   border: none;
   justify-content: center;
@@ -490,8 +479,26 @@ img {
 .subscribe-bttn:hover {
   background-color: #404bbf;
 }
+.icon-social-frame {
+  fill: #fff;
+  margin-left: 16px;
+}
 /* modal */
+.container-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .backdrop-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   display: flex;
   flex-direction: column;
   width: 408px;
@@ -500,8 +507,11 @@ img {
   background-color: #fcfcfc;
   margin: auto;
   align-items: center;
-  padding-top: 72px;
+  padding: 72px 24px 24px 24px;
   position: relative;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-close-container {
   content: "";
@@ -516,12 +526,21 @@ img {
   top: 24px;
   right: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-close-container:active {
+.icon-close-container:hover,
+:focus {
   background-color: #404bbf;
-  fill: #f4f4fd;
+  fill: #fff;
+  border: none;
 }
-.form-title {
+.icon-close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-disc {
   color: #2e2f42;
   text-align: center;
   font-size: 16px;
@@ -530,47 +549,52 @@ img {
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
-.container-form {
+.container-input {
   display: flex;
   flex-direction: column;
   width: 360px;
+  margin-bottom: 8px;
+}
+.container-input-comment {
   margin-bottom: 16px;
 }
 .backdrop-lebel {
   color: #8e8f99;
   font-size: 12px;
   font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0.48px;
-  display: flex;
-  flex-direction: column;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  display: block;
   margin-bottom: 4px;
 }
 .backdrop-item {
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  width: 360px;
+  width: 100%;
   padding-left: 38px;
-  background-color: #fcfcfc;
+  background-color: transparent;
+  outline: transparent;
+  border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.person {
+.container-input-svg {
   position: relative;
   margin-bottom: 8px;
 }
 .backdrop-item:focus-within {
-  border: 1px solid #4d5ae5;
+  border-color: #4d5ae5;
   outline: none;
 }
-.backdrop-item:focus ~ .icon-placeholder {
+.backdrop-item:focus ~ .icon-soc {
   fill: #4d5ae5;
 }
-.icon-placeholder {
-  content: "";
+.icon-soc {
   position: absolute;
-  top: 11px;
+  top: 50%;
   left: 16px;
+  transform: translateY(-50%);
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container-tel {
   position: relative;
@@ -601,45 +625,48 @@ img {
 }
 .text-area {
   margin-top: 4px;
+  width: 100%;
   height: 120px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  background-color: #fcfcfc;
-  padding-top: 8px;
-  padding-left: 16px;
-}
-.text-area::placeholder {
+  background-color: transparent;
+  padding: 8px 16px;
   color: rgba(46, 47, 66, 0.4);
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0.48px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* .text-area::placeholder {
+} */
 .text-area:focus-within {
-  border: 1px solid #4d5ae5;
-  outline: none;
+  border-color: #4d5ae5;
 }
 .polisy-box {
   margin-bottom: 24px;
 }
-.check-box {
-  display: none;
-}
+
 .icon-check-container {
-  display: flex;
+  display: inline-flex;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
+  border-radius: 2px;
   width: 16px;
   height: 16px;
-}
-.icon-check {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center;
+  justify-content: center;
   fill: transparent;
 }
-.check-box:checked ~ .icon-check-container .icon-check {
-  fill: #fcfcfc;
-}
-.check-box:checked ~ .icon-check-container {
+/* .check-box:checked ~ .icon-check-container .icon-check {
+  fill: #f4f4fd;
+} */
+.check-box:checked + .icon-check-container {
   background-color: #4d5ae5;
   border: none;
 }
@@ -648,14 +675,11 @@ img {
   display: flex;
   gap: 8px;
   align-items: center;
-}
-.policy-accept {
   color: #8e8f99;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0.48px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 }
 .polisy-link {
   color: #4d5ae5;
