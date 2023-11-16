@@ -92,7 +92,6 @@ img {
 .menu-studio::after {
   content: "";
   position: absolute;
-  top: 43px;
   left: 0;
   bottom: -1px;
   right: 0;
@@ -232,7 +231,6 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container-list-items:hover {
-  border: 1px solid var(--CLOUD, #f4f4fd);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -252,6 +250,7 @@ img {
   font-size: 16px;
   line-height: 1.5em;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 .front {
   overflow: hidden;
@@ -549,6 +548,7 @@ img {
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
+
 .container-input {
   display: flex;
   flex-direction: column;
@@ -575,11 +575,10 @@ img {
   padding-left: 38px;
   background-color: transparent;
   outline: transparent;
-  border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container-input-svg {
   position: relative;
-  margin-bottom: 8px;
 }
 .backdrop-item:focus-within {
   border-color: #4d5ae5;
@@ -663,12 +662,11 @@ img {
   justify-content: center;
   fill: transparent;
 }
-/* .check-box:checked ~ .icon-check-container .icon-check {
-  fill: #f4f4fd;
-} */
-.check-box:checked + .icon-check-container {
+
+.check-box:checked ~ .policy-accept .icon-check-container {
   background-color: #4d5ae5;
   border: none;
+  fill: #f4f4fd;
 }
 .policy-accept {
   cursor: pointer;
@@ -690,6 +688,8 @@ img {
   text-decoration-line: underline;
 }
 .button-madal {
+  font-family: "Roboto", sans-serif;
+  display: block;
   color: #fff;
   text-align: center;
   font-size: 16px;
@@ -701,9 +701,12 @@ img {
   background-color: #4d5ae5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   border: none;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 120px;
 }
 .visually-hidden {
   position: absolute;
