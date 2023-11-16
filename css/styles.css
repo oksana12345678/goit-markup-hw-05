@@ -630,8 +630,19 @@ img {
   display: flex;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  width: 16px;
+  height: 16px;
 }
-
+.icon-check {
+  fill: transparent;
+}
+.check-box:checked ~ .icon-check-container .icon-check {
+  fill: #fcfcfc;
+}
+.check-box:checked ~ .icon-check-container {
+  background-color: #4d5ae5;
+  border: none;
+}
 .policy-accept {
   cursor: pointer;
   display: flex;
