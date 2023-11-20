@@ -55,8 +55,6 @@ img {
   line-height: 1.17em;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-top: 24px;
-  margin-bottom: 24px;
   margin-right: 76px;
 }
 
@@ -68,9 +66,7 @@ img {
   line-height: 1.17em;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-top: 24px;
   margin-left: 0;
-  margin-bottom: 24px;
 }
 .container-menu {
   color: #2e2f42;
@@ -110,6 +106,7 @@ img {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
 }
 .menu-studio {
   color: #404bbf;
@@ -404,9 +401,7 @@ img {
   text-transform: uppercase;
   text-decoration: none;
 }
-.container-footer-social {
-  margin-left: 120px;
-}
+
 .footer-desc {
   color: #f4f4fd;
   font-size: 16px;
